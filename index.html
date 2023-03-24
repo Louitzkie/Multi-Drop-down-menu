@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Multi Drop-down Menu</title>
+        <link rel="stylesheet" href="./style.css" />
+        <script src="./script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Logo</a>
+
+            <input type="checkbox" id="menu-bar" />
+            <label for="menu-bar">Menubar</label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li>
+                        <a href="#">Pages +</a>
+                        <ul class="dropdown">
+                            <li class="dropdown-menu"><a href="#">blogs</a></li>
+                            <li class="dropdown-menu">
+                                <a href="#">Services +</a>
+                                <ul class="dropdown">
+                                    <li class="dropdown-menu">
+                                        <a href="#">html</a>
+                                    </li>
+                                    <li class="dropdown-menu">
+                                        <a href="#">css</a>
+                                    </li>
+                                    <li class="dropdown-menu">
+                                        <a href="#">javascript</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">gallery</a></li>
+                    <li>
+                        <a href="#">Forms +</a>
+                        <ul class="dropdown">
+                            <li class="dropdown-menu"><a href="#">form1</a></li>
+                            <li class="dropdown-menu"><a href="#">form2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    </body>
+</html>

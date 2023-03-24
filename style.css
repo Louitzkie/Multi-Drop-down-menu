@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+    background: url('./src/bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 9999;
+    color: #333;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #333;
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar li {
+    position: relative;
+    float: left;
+}
+
+.navbar a {
+    font-size: 20px;
+    padding: 20px;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background: #333;
+    color: #fff;
+}
+
+.dropdown {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: #fff;
+    display: none;
+}
+
+.dropdown ul {
+    left: 200px;
+    top: 0;
+}
+
+li:focus-within > .dropdown,
+li:hover > .dropdown {
+    display: initial;
+}
+
+.dropdown-menu {
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+    display: none;
+}
+
+@media (max-width: 991px) {
+    header {
+        padding: 20px;
+    }
+
+    header label {
+        display: initial;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+
+    .navbar ul li {
+        width: 100%;
+    }
+
+    .dropdown {
+        position: relative;
+        width: 100%;
+    }
+
+    .dropdown li {
+        background: #eee;
+    }
+
+    .dropdown li ul {
+        width: 100%;
+        left: 0;
+    }
+
+    #menu-bar:checked ~ .navbar {
+        display: initial;
+    }
+}
